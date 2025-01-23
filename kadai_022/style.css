@@ -1,0 +1,79 @@
+h1,p,body {
+ margin: 0;
+}
+p,a {
+  font-size: 20px;
+}
+/*headerの装飾*/
+h1 {
+  margin-bottom: 20px;
+  background-color: rgb(244, 79, 79);
+  text-align: center;
+  color: rgb(255, 255, 255);
+}
+/*mainの装飾*/
+main {
+  margin: 10px;
+}
+#parent {
+  display: flex;
+  justify-content: space-around;
+}
+.contents {
+  flex-basis: 25%;
+  padding: 10px 15px;
+  margin: 20px 0;
+  border: solid 3px rgb(238, 204, 204);
+  text-align: center;
+  display: inline-block;
+}
+.contents p:nth-of-type(2)::first-letter {
+  font-weight: bold;
+  color: rgb(97, 206, 249);
+}
+.contents img {
+  margin: 10px 0;
+  width: 70%;
+}
+h2 {
+  display: block;
+  font-size: 25px;
+  border-bottom: dotted 3px rgb(236, 122, 122);
+  text-align: center;
+}
+h2::before {
+  content: "●";
+  color: rgb(239, 111, 139);
+}
+.contents img {
+  width: 70%;
+  height: auto;
+}
+/*フッターの装飾**/
+footer {
+  width: 100%;
+  background-color: rgb(244, 79, 79);
+  text-align: center;
+}
+a:link {
+  color: rgb(255, 255, 255);
+}
+a:visited {
+ color: rgb(193, 234, 251);
+}
+a:hover {
+   color: rgb(245, 178, 168);
+}
+/*レスポンシブ*/
+@media screen and (max-width: 768px) {
+  h2 {
+    font-size: 30px;
+  }
+  p {
+    font-size: 25px;
+  }
+#parent {
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+}
