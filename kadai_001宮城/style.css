@@ -1,0 +1,203 @@
+body {
+  color: #000000;
+  background-color: #ffffff;
+  font-family: Noto Sans Japanese;
+  box-sizing: border-box;
+}
+
+.h1__title, .nav {
+  font-size: 34px;
+  font-weight: 600;
+}
+
+.index-h2 {
+  padding-top: 60px;
+  font-size: 34px;
+  font-weight: 700;
+  text-align: center;
+}
+
+.index-h3 {
+  font-size: 24px;
+  font-weight: 600;
+  padding-bottom: 40px;
+  margin-left: 20px;
+}
+
+/* タイトルと見出し */
+.inner__wrapper {
+  max-width: 980px;
+  margin: 0 auto;
+}
+
+.header__wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 0 40px;
+}
+
+.h1__title {
+  border: solid 1px #000000;
+  padding: 6px 20px 3px;
+  margin-left: -20px;
+  white-space: nowrap;
+}
+
+.nav a{
+  text-decoration: none; /* アンダーラインの非表示 */
+  margin-left: 20px;     /* ナビのテキスト間の余白*/
+  list-style: none;      /* 箇条書きの・非表示 */
+  color: #000000;
+}
+
+.nav ul {
+  display: flex;  /* ？.header__wrapperで既にflexを使っているのに別途指定しないと反映しないのはなぜか。 */
+}
+
+.about__text__box,
+.works__container p,
+footer {
+  font-size: 18px;
+}
+
+
+/* aboutセクション */
+.about__wrapper {
+  margin: 0 80px;
+}
+
+.about__container {
+  display: flex;
+  justify-content: center;
+  align-items: center; /* 縦方向の中央揃え */
+  gap: 80px;
+  padding: 80px 0;
+}
+
+.about-img {
+  width: 280px;
+  height: 280px;
+  border-radius: 100%;
+  background-image: url("images/about.png");
+}
+
+.about__text__box {
+  letter-spacing: -0.05em;
+}
+
+.about__text__box li {
+  list-style: disc; /* または別の表示したいスタイルを指定 */
+  margin-left: 60px; /* 必要に応じてインデントを追加 */
+}
+
+/* worksセクション */
+.works__wrapper {
+  margin: 0 80px;
+}
+
+.works__container {
+  display: flex;
+  justify-content: center;
+  align-items: center; /* 縦方向の中央揃え */
+  gap: 10px;
+  padding: 30px 0;
+}
+
+.works-item {
+  width: 18%;
+}
+
+.works-img  {
+  width: 100%;
+  height: auto;
+  padding-bottom: 3%;
+}
+
+footer p {
+  text-align: center;
+  letter-spacing: -0.01em;
+  padding-top: 60px;
+}
+
+/* スマホデザイン */
+@media screen and (max-width: 767px) {
+  .inner__wrapper {
+    justify-content: space-around;
+  }
+
+  .header__wrapper {
+    padding: 15px 5px;
+  }
+
+  .h1__title {
+    font-size: 25px;
+    font-weight: 600;
+    margin: 0 -25px 0 0;
+  }
+
+  .nav a {
+    font-size: 18px;
+    font-weight: 600;
+  }
+
+  .about__wrapper {
+    margin: 0 10px;
+  }
+
+  .about__container {
+    display: flex;
+    flex-flow: column;
+    padding: 40px 20px 0;
+    gap: 10px;
+  }
+
+  .about-img {
+    width: 100%;
+  }
+
+  .index-h2 {
+    padding: 40px 0 0;
+    font-size: 25px;
+  }
+
+  .index-h3 {
+    font-size: 24px;
+    font-weight: 600;
+    margin-left: 15px;
+    padding-bottom: 10px;
+  }
+
+  .about__text__box li {
+    margin-left: 45px;
+  }
+
+  .works__wrapper {
+    margin: 0 10px;
+  }
+
+  .works__container {
+    display: flex;
+    flex-flow: column;
+    justify-content:center;
+    padding-top: 20px;
+  }
+
+  .works-item {
+    width: 100%;
+  } 
+
+  .works-item p {
+    text-align: center;
+  }
+
+  .works-img {
+    padding-top: 20px;
+  }
+
+  footer p {
+    text-align: center;
+    padding-top: 10px;
+    margin: 0;
+  }
+}
